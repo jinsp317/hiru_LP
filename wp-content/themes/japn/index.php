@@ -606,7 +606,8 @@ if(isset($_POST['contact_kind'])) {
                                     <p>昼ナビは、キャバクラ・クラブ・ボーイ・黒服などのナイトワークの方々が昼職に転職に転職したいと考えた時に感じる「履歴書の書き方が分からない」・「自分にあった仕事が分からない」・「昼職の実情が分からない」といったお悩みをアドバイザーが一人ひとりに真剣に向き合い、お話しした上で全て解消し、希望や適正に応じたお仕事をご紹介します。
                                     </p>
                                     <div class="daytime-btn-hp">
-                                        <a href="<?php echo get_site_url() ?>/consultation_form" class="common-btn-hp">お問い合わせはこちら</a>
+                                        <a href="<?php echo get_site_url() ?>/consultation_form"
+                                            class="common-btn-hp">お問い合わせはこちら</a>
                                     </div>
                                 </div>
                                 <div class="clearfix"></div>
@@ -810,7 +811,8 @@ if(isset($_POST['contact_kind'])) {
                                     <p>昼ナビは、キャバクラ・クラブ・ボーイ・黒服などのナイトワークの方々が昼職に転職に転職したいと考えた時に感じる「履歴書の書き方が分からない」・「自分にあった仕事が分からない」・「昼職の実情が分からない」といったお悩みをアドバイザーが一人ひとりに真剣に向き合い、お話しした上で全て解消し、希望や適正に応じたお仕事をご紹介します。
                                     </p>
                                     <div class="daytime-btn-hp">
-                                        <a href="<?php echo get_site_url() ?>/consultation_form" class="common-btn-hp">お問い合わせはこちら</a>
+                                        <a href="<?php echo get_site_url() ?>/consultation_form"
+                                            class="common-btn-hp">お問い合わせはこちら</a>
                                     </div>
                                 </div>
                                 <div class="clearfix"></div>
@@ -840,127 +842,36 @@ if(isset($_POST['contact_kind'])) {
         </div>
         <div class="work-middle-hp">
             <div class="owl-carousel owl-theme" id="work_slider">
+
+                <?php
+                    $args = array(
+                        'post_type' => 'example',
+                        'posts_per_page' => 9);            
+                        $the_query = new WP_Query($args); 
+                     ?>
+                <?php if ($the_query->have_posts()): ?>
+                <?php while ($the_query->have_posts()): $the_query->the_post();?>
                 <div class="work-box-hp">
-                    <a href="#">
+                    <a href="<?php echo get_site_url(); ?>/example/<?php the_title() ?>">
                         <div class="work-box-img-hp">
-                            <img src="<?php echo get_stylesheet_directory_uri() ?>/images/work_img1.png" alt="" />
+                            <?php 
+                               $logo = get_field('log'); 
+                                                    if( !empty( $logo ) ): ?>
+                            <img src="<?php echo esc_url($logo['url']); ?>"
+                                alt="<?php echo esc_attr($logo['alt']); ?>" />
+                            <?php endif; ?>
                         </div>
                         <div class="work-box-text-hp">
-                            <h3>記事タイトルが入ります記事タイトルが入ります記事タイトルが入ります記事タイトルが入ります</h3>
-                            <p>会社名が入ります</p>
+                            <h3><?php the_title(); ?></h3>
+                            <p><?php the_field('company') ?></p>
                         </div>
                     </a>
                 </div>
-                <div class="work-box-hp">
-                    <a href="#">
-                        <div class="work-box-img-hp">
-                            <img src="<?php echo get_stylesheet_directory_uri() ?>/images/work_img1.png" alt="" />
-                        </div>
-                        <div class="work-box-text-hp">
-                            <h3>記事タイトルが入ります記事タイトルが入ります記事タイトルが入ります記事タイトルが入ります</h3>
-                            <p>会社名が入ります</p>
-                        </div>
-                    </a>
-                </div>
-                <div class="work-box-hp">
-                    <a href="#">
-                        <div class="work-box-img-hp">
-                            <img src="<?php echo get_stylesheet_directory_uri() ?>/images/work_img1.png" alt="" />
-                        </div>
-                        <div class="work-box-text-hp">
-                            <h3>記事タイトルが入ります記事タイトルが入ります記事タイトルが入ります記事タイトルが入ります</h3>
-                            <p>会社名が入ります</p>
-                        </div>
-                    </a>
-                </div>
-                <div class="work-box-hp">
-                    <a href="#">
-                        <div class="work-box-img-hp">
-                            <img src="<?php echo get_stylesheet_directory_uri() ?>/images/work_img1.png" alt="" />
-                        </div>
-                        <div class="work-box-text-hp">
-                            <h3>記事タイトルが入ります記事タイトルが入ります記事タイトルが入ります記事タイトルが入ります</h3>
-                            <p>会社名が入ります</p>
-                        </div>
-                    </a>
-                </div>
-                <div class="work-box-hp">
-                    <a href="#">
-                        <div class="work-box-img-hp">
-                            <img src="<?php echo get_stylesheet_directory_uri() ?>/images/work_img1.png" alt="" />
-                        </div>
-                        <div class="work-box-text-hp">
-                            <h3>記事タイトルが入ります記事タイトルが入ります記事タイトルが入ります記事タイトルが入ります</h3>
-                            <p>会社名が入ります</p>
-                        </div>
-                    </a>
-                </div>
-                <div class="work-box-hp">
-                    <a href="#">
-                        <div class="work-box-img-hp">
-                            <img src="<?php echo get_stylesheet_directory_uri() ?>/images/work_img1.png" alt="" />
-                        </div>
-                        <div class="work-box-text-hp">
-                            <h3>記事タイトルが入ります記事タイトルが入ります記事タイトルが入ります記事タイトルが入ります</h3>
-                            <p>会社名が入ります</p>
-                        </div>
-                    </a>
-                </div>
-                <div class="work-box-hp">
-                    <a href="#">
-                        <div class="work-box-img-hp">
-                            <img src="<?php echo get_stylesheet_directory_uri() ?>/images/work_img1.png" alt="" />
-                        </div>
-                        <div class="work-box-text-hp">
-                            <h3>記事タイトルが入ります記事タイトルが入ります記事タイトルが入ります記事タイトルが入ります</h3>
-                            <p>会社名が入ります</p>
-                        </div>
-                    </a>
-                </div>
-                <div class="work-box-hp">
-                    <a href="#">
-                        <div class="work-box-img-hp">
-                            <img src="<?php echo get_stylesheet_directory_uri() ?>/images/work_img1.png" alt="" />
-                        </div>
-                        <div class="work-box-text-hp">
-                            <h3>記事タイトルが入ります記事タイトルが入ります記事タイトルが入ります記事タイトルが入ります</h3>
-                            <p>会社名が入ります</p>
-                        </div>
-                    </a>
-                </div>
-                <div class="work-box-hp">
-                    <a href="#">
-                        <div class="work-box-img-hp">
-                            <img src="<?php echo get_stylesheet_directory_uri() ?>/images/work_img1.png" alt="" />
-                        </div>
-                        <div class="work-box-text-hp">
-                            <h3>記事タイトルが入ります記事タイトルが入ります記事タイトルが入ります記事タイトルが入ります</h3>
-                            <p>会社名が入ります</p>
-                        </div>
-                    </a>
-                </div>
-                <div class="work-box-hp">
-                    <a href="#">
-                        <div class="work-box-img-hp">
-                            <img src="<?php echo get_stylesheet_directory_uri() ?>/images/work_img1.png" alt="" />
-                        </div>
-                        <div class="work-box-text-hp">
-                            <h3>記事タイトルが入ります記事タイトルが入ります記事タイトルが入ります記事タイトルが入ります</h3>
-                            <p>会社名が入ります</p>
-                        </div>
-                    </a>
-                </div>
-                <div class="work-box-hp">
-                    <a href="#">
-                        <div class="work-box-img-hp">
-                            <img src="<?php echo get_stylesheet_directory_uri() ?>/images/work_img1.png" alt="" />
-                        </div>
-                        <div class="work-box-text-hp">
-                            <h3>記事タイトルが入ります記事タイトルが入ります記事タイトルが入ります記事タイトルが入ります</h3>
-                            <p>会社名が入ります</p>
-                        </div>
-                    </a>
-                </div>
+                <?php endwhile;
+                                        wp_reset_postdata();?>
+                <?php else: ?>
+                <p></p>
+                <?php endif;?>
             </div>
         </div>
         <div class="clearfix"></div>
@@ -1211,7 +1122,8 @@ if(isset($_POST['contact_kind'])) {
                                     <p>昼ナビは、キャバクラ・クラブ・ボーイ・黒服などのナイトワークの方々が昼職に転職に転職したいと考えた時に感じる「履歴書の書き方が分からない」・「自分にあった仕事が分からない」・「昼職の実情が分からない」といったお悩みをアドバイザーが一人ひとりに真剣に向き合い、お話しした上で全て解消し、希望や適正に応じたお仕事をご紹介します。
                                     </p>
                                     <div class="daytime-btn-hp">
-                                        <a href="<?php echo get_site_url() ?>/consultation_form" class="common-btn-hp">お問い合わせはこちら</a>
+                                        <a href="<?php echo get_site_url() ?>/consultation_form"
+                                            class="common-btn-hp">お問い合わせはこちら</a>
                                     </div>
                                 </div>
                                 <div class="clearfix"></div>

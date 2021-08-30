@@ -1,0 +1,3 @@
+Aug 29 2021 14:03:35
+{"Number":2,"Message":"rmdir(D:\\project\\Web\\wordpress\\wp-content\\plugins\\all-in-one-wp-migration\\storage\\zwtu1y28hxbq): Directory not empty","File":"D:\\project\\Web\\wordpress\\wp-content\\plugins\\all-in-one-wp-migration\\lib\\vendor\\servmask\\filesystem\\class-ai1wm-directory.php","Line":72}
+

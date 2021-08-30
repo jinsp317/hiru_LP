@@ -55,7 +55,7 @@
                                 <div class="collapse navbar-collapse" id="navbarTogglerDemo01">
                                     <ul class="navbar-nav ml-auto">
                                         <li class="nav-item">
-                                            <a class="nav-link" href="#">昼ナビとは</a>
+                                            <a class="nav-link" href="<?php echo get_site_url(); ?>/about">昼ナビとは</a>
                                         </li>
                                         <li class="nav-item">
                                             <a class="nav-link" href="#merit-top-hp">3つのメリット</a>
