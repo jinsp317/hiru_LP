@@ -55,7 +55,7 @@
                                 <div class="collapse navbar-collapse" id="navbarTogglerDemo01">
                                     <ul class="navbar-nav ml-auto">
                                         <li class="nav-item">
-                                            <a class="nav-link" href="<?php echo get_site_url(); ?>/about">昼ナビとは</a>
+                                            <a class="nav-link" href="#about_hiru">昼ナビとは</a>
                                         </li>
                                         <li class="nav-item">
                                             <a class="nav-link" href="#merit-top-hp">3つのメリット</a>
@@ -73,7 +73,7 @@
                                 </div>
                                 <div class="header-right-hp">
                                     <div class="contact-btn-main-hp">
-                                        <a href="<?php echo get_site_url(); ?>/consultation_form" class="contact-btn-hp">お問い合わせ</a>
+                                        <a href="#form_consult" class="contact-btn-hp">お問い合わせ</a>
                                     </div>
                                 </div>
                             </nav>

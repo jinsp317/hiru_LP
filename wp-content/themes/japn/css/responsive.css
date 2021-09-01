@@ -5,8 +5,8 @@
 .common-btn-hp{ min-width:240px; }
 
 /*--------------- HEADER_START --------------*/
-#header{ padding:0px; box-shadow:0 0 5px rgba(0,0,0,0.2); background:#fff; }
-.header-in-hp{ padding:0 15px; height:70px; justify-content: space-between; margin-top:0; }
+#header{ padding:0px; box-shadow:0 0 5px rgba(0,0,0,0.2); background:#fff; position:relative; }
+.header-in-hp{ padding:0 15px; height:70px; justify-content: space-between; margin-top:0;  }
 .logo-hp{ width: 80px; padding:0px; }
 .logo-hp img{ width:100%; height:auto; }
 .mobile-menu-icon-hp{ display:block; margin-top:0px; margin-right:0; }
@@ -90,10 +90,14 @@
 .trouble-title-hp h3:after{ width: 30px; height: 42px; background-size: 100%; }
 .trouble-desc-hp { padding: 20px 0 20px 0; font-size: 15px; line-height: 30px; }
 .trouble-desc-hp span{ font-size:15px; }
-.trouble-bottom-hp{ flex-direction: column; }
-.trouble-box-in-hp{ width: 250px; height: 250px; font-size: 18px; line-height: 36px; margin:auto; }
-.trouble-img-hp{ padding:20px 0px; }
-
+.trouble-bottom-hp{ flex-direction: row; }
+.trouble-box-hp { flex-grow : 1;}
+.trouble-box-in-hp{ width: 150px; height: 150px; font-size: 12px; line-height: 22px; margin:auto;  }
+ .hp_right img { display:none;}
+/*.hp_left { float:left;} */
+.trouble-img-hp{ display:none; }
+.trouble-img-hp_android{ display:block !important; margin-top:0px; width:100% !important; text-align:center !important }
+.trouble-img-hp_android img{ width:220px;}
 .solution-block-hp{ background:#FCFFEA; margin:0; padding:50px 0; }
 .solution-top-hp{ padding:0; }
 .solution-title-hp h3{ font-size: 18px; line-height: 40px; }
@@ -104,9 +108,12 @@
 
 .merit-block-hp{ padding:60px 0 0 0; }
 .merit-precess-main-mp{ display:block; padding:40px 0 20px 0; }
-.merit-box-mp{ width:300px; margin:0 auto 30px auto !important;  }
-.merit-number-mp{ font-size:80px; }
-.merit-name-mp{ font-size: 25px; line-height: 35px; }
+.merit-box-mp{ width:250px; margin:0 auto 30px auto !important;  }
+.merit-box-mp a { width:250px;height:250px; }
+.merit-number-mp{ font-size:45px; padding-top:15px;}
+.merit-number-mp span{ font-size:110px;}
+.merit-name-mp{ font-size: 22px; line-height: 1.5; }
+.merit-arrow-mp {padding-top:10px;}
 .merit-box-hp{ padding:20px; display:block;     margin-bottom: 40px; }
 .merit-box-left-hp{ width:100%; }
 .merit-box-right-hp{ width:100%; padding:30px 0 0 0; }
@@ -147,15 +154,15 @@
 .flow-fp ul{ width: 1000px; }
 .flow-name-fp{ font-size: 13px; line-height: 24px; padding:0 10px; }
 .flow-list-fp{ display:block; margin-top: 60px; }
-.flow-list-left-fp{ background-position:left center; }
-.flow-list-right-fp{ width:100%; padding:20px; }
-.flow-list-name-fp{ font-size:15px; line-height:25px; height:auto; padding-bottom:20px; }
+.flow-list-left-fp{ margin:auto; background-size:100% 85%; background-position: top center; background-image: url(../images/flow_down.svg);width:100%;min-height:175px;}
+.flow-list-right-fp{ width:100%; padding:20px; padding-top:0px !important; }
+.flow-list-name-fp{ font-size:15px; line-height:25px; height:auto; padding-bottom:10px; }
 .flow-list-right-fp p { font-size: 13px; line-height: 26px; }
 .flow-list-fp:before{ bottom: -45px; background-size: auto 100%; height:25px; }
-.flow-step-fp{ padding:15px 0 0 15px; font-size:60px; }
-.flow-list-left-fp .flow-list-name-fp{ font-size: 20px; line-height: 40px; }
-.flow-list-left-fp .flow-step-fp { padding: 15px 0 15px 17px; }
-
+.flow-step-fp{ padding:8px 0 0 8px; font-size:60px; }
+.flow-list-left-fp .flow-list-name-fp{ font-size: 20px; line-height: 1.5; }
+.flow-list-left-fp .flow-step-fp { padding: 8px 0 8px 8px; }
+.flow-list-left-fp .flow-step-fp span{ font-size:170px; top:10%;}
 .company-middle-hp { padding: 40px 0; }
 .company-info-hp { font-size: 14px; line-height: 28px; padding: 20px 0 0 0; }
 #contain {
@@ -775,7 +782,16 @@
 .about-extra-in-full-nip .about-extra-title-nip h3 {
     padding-bottom: 0;
 }
-
+.android_folding{
+    display: flex !important;   
+    border-top:1px solid white;
+}
+.footer-top-hp { 
+    padding-bottom:0px;
+}
+.copyright-hp{
+    padding-bottom:1rem;
+}
 /*--------------- ABOUT_END --------------*/
 }
 
@@ -787,7 +803,7 @@
 
 /*--------------- HEADER_START --------------*/
 #header{ padding:0px; box-shadow:0 0 5px rgba(0,0,0,0.2); background:#fff; }
-.header-in-hp{ padding:0 15px; height:70px; justify-content: space-between; margin-top:0; }
+.header-in-hp{ padding:0 15px; height:70px; justify-content: space-between; margin-top:0;  }
 .logo-hp{ width: 80px; padding:0px; }
 .logo-hp img{ width:100%; height:auto; }
 .mobile-menu-icon-hp{ display:block; margin-top:0px; margin-right:0; }
@@ -886,7 +902,8 @@
 
 .merit-block-hp{ padding:60px 0 0 0; }
 .merit-precess-main-mp{ display:block; padding:40px 0 20px 0; }
-.merit-box-mp{ width:300px; margin:0 auto 30px auto !important;  }
+.merit-box-mp{ width:200px; margin:0 auto 30px auto !important;  }
+
 .merit-number-mp{ font-size:80px; }
 .merit-name-mp{ font-size: 25px; line-height: 35px; }
 .merit-box-hp{ padding:20px; display:block;     margin-bottom: 40px; }

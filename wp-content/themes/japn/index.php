@@ -151,444 +151,466 @@ if(isset($_POST['contact_kind'])) {
     </div>
     <div class="form-block-hp">
         <div class="container">
-            <div class="row">
-                <form id="reservation" method="POST" action="">
-                    <input type="hidden" name="contact_kind" value="1" />
-                    <div class="col-lg-12 col-md-12 col-sm-12 col-xs-12 form-block-in-hp">
-                        <div class="form-title-hp">
-                            <div class="form-logo-hp">
-                                <img src="<?php echo get_stylesheet_directory_uri() ?>/images/form_logo.png" alt="" />
-                            </div>
-                            <div class="form-title-name-hp">
-                                夜職→昼職への転職を「全て無料」でサポートします。<br>
-                                履歴書や職務経歴書の作成も私たちに全てお任せください。
-                            </div>
-                            <div class="form-title-tags-hp">
-                                <div class="form-title-tags-in-hp">45秒で登録</div>
-                                <div class="form-title-tags-in-hp">履歴書、職務経歴書必要なし</div>
-                                <div class="form-title-tags-in-hp">ビジネスマナーや面接対策もお教えします</div>
-                            </div>
-                        </div>
-                        <div class="form-middle-hp">
-                            <div class="form-middle-main-hp">
-                                <div class="form-middle-main-border-hp">
-                                    <?php if(!$success_mail) {?>
-                                    <div class="steps-hp">
-                                        <div class="step-hp step-1-hp active">1
-                                            <br><span>就業状況</span>
-                                        </div>
-                                        <div class="step-hp step-2-hp">2
-                                            <br><span>生年月日</span>
-                                        </div>
-                                        <div class="step-hp step-3-hp">3
-                                            <br><span>希望勤務地</span>
-                                        </div>
-                                        <div class="step-hp step-4-hp">4
-                                            <br><span>お名前</span>
-                                        </div>
-                                        <div class="step-hp step-5-hp">5
-                                            <br><span>連絡先</span>
-                                        </div>
-
+            <div class="form-row">
+                <div class="col-lg-12 col-md-12 col-sm-12 col-xs-12 about-block-in-ip">
+                    <form id="reservation" method="POST" action="">
+                        <input type="hidden" name="contact_kind" value="1" />
+                        <div class="row">
+                            <div class="col-lg-12 col-md-12 col-sm-12 col-xs-12 form-block-in-hp">
+                                <div class="form-title-hp">
+                                    <div class="form-logo-hp" id="form_consult">
+                                        <img src="<?php echo get_stylesheet_directory_uri() ?>/images/form_logo.png"
+                                            alt="" />
                                     </div>
-                                    <?php } ?>
-                                    <div class="form-boxes-hp">
-                                        <?php if(!$success_mail) {?>
-                                        <div class="form-boxes-in-hp form-boxes-1-hp">
-                                            <div class="form-number-hp">
-                                                <span>Q1</span>
-                                            </div>
-                                            <div class="form-title-hp">
-                                                <h2>経験のある仕事を<br>教えてください<span>（複数選択可）</span>
-                                                </h2>
-                                            </div>
-                                            <div class="form-option-hp">
-                                                <div class="form-hp">
-                                                    <input type="checkbox" name="shugyo[]" id="girls" class="q1"
-                                                        value="ガールズバー">
-                                                    <label for="girls" class="">ガールズバー</label>
-                                                </div>
-                                                <div class="form-hp">
-                                                    <input type="checkbox" name="shugyo[]" id="caba" class="q1"
-                                                        value="キャバクラ">
-                                                    <label for="caba" class="">キャバクラ</label>
-                                                </div>
-                                                <div class="form-hp">
-                                                    <input type="checkbox" name="shugyo[]" id="rounge" class="q1"
-                                                        value="ラウンジ">
-                                                    <label for="rounge" class="">ラウンジ</label>
-                                                </div>
-                                                <div class="form-hp">
-                                                    <input type="checkbox" name="shugyo[]" id="snack" class="q1"
-                                                        value="スナック">
-                                                    <label for="snack" class="">スナック</label>
-                                                </div>
-                                                <div class="form-hp">
-                                                    <input type="checkbox" name="shugyo[]" id="mens" class="q1"
-                                                        value="メンズエステ">
-                                                    <label for="mens" class="">メンズエステ</label>
-                                                </div>
-                                                <div class="form-hp">
-                                                    <input type="checkbox" name="shugyo[]" id="fuzoku" class="q1"
-                                                        value="風俗">
-                                                    <label for="fuzoku" class="">風俗</label>
-                                                </div>
-                                                <div class="form-hp">
-                                                    <input type="checkbox" name="shugyo[]" id="other" class="q1"
-                                                        value="その他">
-                                                    <label for="other" class="">その他</label>
-                                                </div>
-                                            </div>
-                                            <div class="form-btn-main-hp">
-                                                <button type="button" class="common-btn-hp form-btn-hp submit_btn_1"
-                                                    disabled>次のステップへ</button>
-                                            </div>
-                                            <div class="guidance-hp">
-                                                <p class="comment">
-                                                    <span>まずは<br>最初のステップ！</span>
-                                                </p>
-                                                <div class="staff"><img
-                                                        src="<?php echo get_stylesheet_directory_uri(); ?>/images/staff.png"
-                                                        alt="">
-                                                </div>
-                                            </div>
-                                        </div>
-                                        <div class="form-boxes-in-hp form-boxes-2-hp" style="display:none;">
-                                            <div class="form-number-hp">
-                                                <span>Q2</span>
-                                            </div>
-                                            <div class="form-title-hp">
-                                                <h2>生まれた年を入力してください</h2>
-                                            </div>
-                                            <div class="form-option-hp form-option-2-hp">
-                                                <div class="form-hp form-2-hp">
-                                                    <p class="year">西暦</p>
-                                                    <div class="detail"><input required="" type="text" name="seinen"
-                                                            id="seinen" placeholder="生まれた年" value=""></div>
-                                                    <p class="year">年</p>
-                                                </div>
-                                            </div>
-                                            <div class="form-btn-main-hp">
-                                                <button type="button" class="common-btn-hp form-btn-hp submit_btn_2"
-                                                    disabled>次のステップへ</button>
-                                            </div>
-                                            <div class="back-hp">
-                                                <input type="button" class="back_btn back_btn_2" value="戻って修正する">
-                                            </div>
-                                            <div class="guidance-hp">
-                                                <p class="comment">
-                                                    <span>生まれた年を<br>ご記入ください</span>
-                                                </p>
-                                                <div class="staff"><img
-                                                        src="<?php echo get_stylesheet_directory_uri(); ?>/images/staff.png"
-                                                        alt="">
-                                                </div>
-                                            </div>
-                                        </div>
-                                        <div class="form-boxes-in-hp form-boxes-3-hp" style="display:none;">
-                                            <div class="form-number-hp">
-                                                <span>Q3</span>
-                                            </div>
-                                            <div class="form-title-hp">
-                                                <h2>希望勤務地はどこですか？</h2>
-                                            </div>
-                                            <div class="form-option-hp form-option-3-hp">
-                                                <div class="form-hp">
-                                                    <input type="checkbox" name="kinmuchi[]" class="q3" id="tokyo"
-                                                        value="東京">
-                                                    <label for="tokyo">東京</label>
-                                                </div>
-                                                <!--form-->
-
-                                                <div class="form-hp">
-                                                    <input type="checkbox" name="kinmuchi[]" class="q3" id="kanagawa"
-                                                        value="神奈川">
-                                                    <label for="kanagawa">神奈川</label>
-                                                </div>
-                                                <!--form-->
-
-                                                <div class="form-hp">
-                                                    <input type="checkbox" name="kinmuchi[]" class="q3" id="chiba"
-                                                        value="千葉">
-                                                    <label for="chiba">千葉</label>
-                                                </div>
-                                                <!--form-->
-
-                                                <div class="form-hp">
-                                                    <input type="checkbox" name="kinmuchi[]" class="q3" id="saitama"
-                                                        value="埼玉">
-                                                    <label for="saitama">埼玉</label>
-                                                </div>
-                                                <!--form-->
-
-                                                <div class="form-hp">
-                                                    <input type="checkbox" name="kinmuchi[]" class="q3" id="osaka"
-                                                        value="大阪">
-                                                    <label for="osaka">大阪</label>
-                                                </div>
-                                                <!--form-->
-
-                                                <div class="form-hp">
-                                                    <input type="checkbox" name="kinmuchi[]" class="q3" id="kyoto"
-                                                        value="京都">
-                                                    <label for="kyoto">京都</label>
-                                                </div>
-                                                <!--form-->
-
-                                                <div class="form-hp">
-                                                    <input type="checkbox" name="kinmuchi[]" class="q3" id="hyogo"
-                                                        value="兵庫">
-                                                    <label for="hyogo">兵庫</label>
-                                                </div>
-                                                <!--form-->
-
-                                                <div class="form-hp">
-                                                    <input type="checkbox" name="kinmuchi[]" class="q3" id="nara"
-                                                        value="奈良">
-                                                    <label for="nara">奈良</label>
-                                                </div>
-                                                <!--form-->
-
-                                                <div class="form-hp">
-                                                    <input type="checkbox" name="kinmuchi[]" class="q3" id="fukuoka"
-                                                        value="福岡">
-                                                    <label for="fukuoka">福岡</label>
-                                                </div>
-                                                <!--form-->
-
-                                                <div class="form-hp">
-                                                    <input type="checkbox" name="kinmuchi[]" class="q3" id="aichi"
-                                                        value="愛知">
-                                                    <label for="aichi">愛知</label>
-                                                </div>
-                                                <!--form-->
-
-                                                <div class="form-hp">
-                                                    <input type="checkbox" name="kinmuchi[]" class="q3" id="sapporo"
-                                                        value="札幌">
-                                                    <label for="sapporo">札幌</label>
-                                                </div>
-                                                <!--form-->
-
-                                                <div class="form-hp">
-                                                    <input type="checkbox" name="kinmuchi[]" class="q3" id="miyagi"
-                                                        value="宮城">
-                                                    <label for="miyagi">宮城</label>
-                                                </div>
-                                                <!--form-->
-
-                                                <div class="form-hp">
-                                                    <input type="checkbox" name="kinmuchi[]" class="q3" id="all"
-                                                        value="全国">
-                                                    <label for="all">全国</label>
-                                                </div>
-                                                <!--form-->
-                                            </div>
-                                            <div class="form-btn-main-hp">
-                                                <button type="button" class="common-btn-hp form-btn-hp submit_btn_3"
-                                                    disabled>次のステップへ</button>
-                                            </div>
-                                            <div class="back-hp">
-                                                <input type="button" class="back_btn back_btn_3" value="戻って修正する">
-                                            </div>
-                                            <div class="guidance-hp">
-                                                <p class="comment">
-                                                    <span>ご希望の勤務地を<br>教えてください</span>
-                                                </p>
-                                                <div class="staff"><img
-                                                        src="<?php echo get_stylesheet_directory_uri(); ?>/images/staff.png" />
-                                                </div>
-                                            </div>
-                                        </div>
-                                        <div class="form-boxes-in-hp form-boxes-4-hp" style="display:none;">
-                                            <div class="form-number-hp">
-                                                <span>Q4</span>
-                                            </div>
-                                            <div class="form-title-hp">
-                                                <h2>お名前とフリガナを教えてください</h2>
-                                            </div>
-                                            <div class="form-option-hp form-option-4-hp">
-                                                <div class="form-hp">
-                                                    <p class="item">お名前</p>
-                                                    <div class="detail">
-                                                        <input required type="text" class="name1" name="name_sei"
-                                                            placeholder="姓" id="name_sei" value="">
-                                                        <input type="text" class="name1" name="name_mei" placeholder="名"
-                                                            id="name_mei" value="">
-                                                    </div>
-                                                </div>
-                                                <div class="form-hp">
-                                                    <p class="item">フリガナ</p>
-                                                    <div class="detail">
-                                                        <input required type="text" class="name2" name="furigana_sei"
-                                                            placeholder="セイ" value="" id="furigana_sei">
-                                                        <input type="text" class="name2" name="furigana_mei"
-                                                            placeholder="メイ" value="" id="furigana_mei">
-                                                    </div>
-                                                </div>
-                                            </div>
-                                            <div class="form-btn-main-hp">
-                                                <button type="button" class="common-btn-hp form-btn-hp submit_btn_4"
-                                                    disabled>次のステップへ</button>
-                                            </div>
-                                            <div class="back-hp">
-                                                <input type="button" class="back_btn back_btn_4" value="次のステップへ">
-                                            </div>
-                                            <div class="guidance-hp">
-                                                <p class="comment"><span>あと一息です！</span>
-                                                </p>
-                                                <div class="staff"><img
-                                                        src="<?php echo get_stylesheet_directory_uri(); ?>/images/staff.png"
-                                                        alt="">
-                                                </div>
-                                            </div>
-                                        </div>
-                                        <div class="form-boxes-in-hp form-boxes-5-hp" style="display:none;">
-                                            <div class="form-number-hp">
-                                                <span>Q5</span>
-                                            </div>
-                                            <div class="form-title-hp">
-                                                <h2>優良企業を紹介するための<br>連絡先を教えてください</h2>
-                                            </div>
-                                            <div class="form-option-hp form-option-4-hp form-option-5-hp">
-                                                <div class="form-hp">
-                                                    <p class="item">携帯番号</p>
-                                                    <div class="detail"><input required="" type="tel" class="tel"
-                                                            name="tel" id="tel" placeholder="000-0000-0000" value="">
-                                                    </div>
-                                                </div>
-                                                <div class="form-hp form-email-hp">
-                                                    <p class="item">メールアドレス</p>
-                                                    <div class="detail">
-                                                        <input required="" type="email" class="email" name="email"
-                                                            id="email" placeholder="xxx@xxx.xxx" value="">
-                                                    </div>
-                                                </div>
-                                            </div>
-                                            <div class="form-btn-main-hp">
-                                                <button type="button" class="common-btn-hp form-btn-hp submit_btn_5"
-                                                    disabled>確認する</button>
-                                            </div>
-                                            <div class="back-hp">
-                                                <input type="button" class="back_btn back_btn_5" value="戻って修正する">
-                                            </div>
-                                            <div class="guidance-hp">
-                                                <p class="comment">
-                                                    <span>これが<br>最後の質問です！</span>
-                                                </p>
-                                                <div class="staff">
-                                                    <img src="<?php echo get_stylesheet_directory_uri(); ?>/images/staff.png"
-                                                        alt="">
-                                                </div>
-                                            </div>
-                                        </div>
-                                        <div class="form-boxes-in-hp form-boxes-6-hp" style="display: none">
-                                            <p class="check_p4 text-center h1">CHECK</p>
-                                            <h2 class="text-center">入力に間違いはありませんか？</h2>
-                                            <div class="forms container mt-2">
-                                                <div class="form-item top_border">
-                                                    <p class="form_query font-weight-bold">
-                                                        現在就業していますか？</p>
-                                                    <p id="answer_1" class="mt-1">
-                                                    </p>
-                                                </div>
-
-                                                <div class="form-item">
-                                                    <p class="form_query font-weight-bold">
-                                                        生年月日を入力して下さい</p>
-                                                    <p id="answer_2" class="mt-1">
-                                                    </p>
-                                                </div>
-
-                                                <div class="form-item">
-                                                    <p class="form_query font-weight-bold">
-                                                        希望勤務地はどこですか？</p>
-                                                    <p id="answer_3" class="mt-1">
-                                                    </p>
-                                                </div>
-
-                                                <div class="form-item">
-                                                    <p class="form_query font-weight-bold">
-                                                        お名前とフリガナを教えてください</p>
-                                                    <p class="mt-1">
-                                                        <span class="text-muted">お名前：</span>
-                                                        <span id="name_i"></span>
-                                                    </p>
-                                                    <p>
-                                                        <span class="text-muted">フリガナ：</span>
-                                                        <span id="furigana"></span>
-                                                    </p>
-                                                </div>
-
-                                                <div class="form-item">
-                                                    <p class="form_query font-weight-bold">
-                                                        優良企業を紹介するための連絡先を教えてください</p>
-                                                    <p class="mt-1">
-                                                        <span class="text-muted">携帯：</span>
-                                                        <span id="tel_txt"></span>
-                                                    </p>
-                                                    <p>
-                                                        <span class="text-muted">メールアドレス：</span>
-                                                        <span id="email_txt"></span>
-                                                    </p>
-                                                </div>
-                                            </div>
-                                            <div class="form-btn-main-hp">
-                                                <button type="button"
-                                                    class="common-btn-hp form-btn-hp submit_btn_6">送信する</button>
-                                            </div>
-                                            <div class="back-hp">
-                                                <input type="button" class="back_btn back_btn_6" value="戻って修正する">
-                                            </div>
-                                            <div class="guidance-hp">
-                                                <p class="comment">
-                                                    <span>最終確認を<br />お願いいたします！</span>
-                                                </p>
-                                                <div class="staff">
-                                                    <img src="<?php echo get_stylesheet_directory_uri(); ?>/images/staff.png"
-                                                        alt="">
-                                                </div>
-                                            </div>
-                                        </div>
-                                        <?php } else {?>
-                                        <div class="form-boxes-in-hp form-boxes-7-hp text-center">
-                                            <h2 class="text-center">送信完了</h2>
-                                            <div class="forms container mt-2">
-                                                <p class="py-4 h5">
-                                                    昼ナビへのエントリーを受け付けました。<br />
-                                                    確認メールをお送りさせていただいております。<br />
-                                                    内容確認後、担当者よりご連絡させていただきます。<br />
-                                                </p>
-                                                <p class="text-danger py-4">
-                                                    自動返信メールが届かない場合は、<br />
-                                                    フォーム内容が送信出来ていない可能性がございます。<br />
-                                                    お手数をおかけいたしますが、再度ご入力いただくか、<br />
-                                                    直接お電話にてお問い合わせください。<br />
-                                                </p>
-                                            </div>
-                                            <div class="form-btn-main-hp">
-                                                <button type="button"
-                                                    class="common-btn-hp form-btn-hp submit_btn_7">ホームへ戻る</button>
-                                            </div>
-                                            <div class="guidance-hp">
-                                                <p class="comment">
-                                                    <span>送信が<br />完了しました！</span>
-                                                </p>
-                                                <div class="staff">
-                                                    <img src="<?php echo get_stylesheet_directory_uri(); ?>/images/staff.png"
-                                                        alt="">
-                                                </div>
-                                            </div>
-                                        </div>
-                                        <?php } ?>
+                                    <div class="form-title-name-hp">
+                                        夜職→昼職への転職を「全て無料」でサポートします。<br>
+                                        履歴書や職務経歴書の作成も私たちに全てお任せください。
+                                    </div>
+                                    <div class="form-title-tags-hp">
+                                        <div class="form-title-tags-in-hp">45秒で登録</div>
+                                        <div class="form-title-tags-in-hp">履歴書、職務経歴書必要なし</div>
+                                        <div class="form-title-tags-in-hp">ビジネスマナーや面接対策もお教えします</div>
                                     </div>
                                 </div>
+                                <div class="form-middle-hp">
+                                    <div class="form-middle-main-hp">
+                                        <div class="form-middle-main-border-hp ">
+                                            <?php if(!$success_mail) {?>
+                                            <div class="steps-hp ">
+                                                <div class="step-hp step-1-hp active">1
+                                                    <br><span>就業状況</span>
+                                                </div>
+                                                <div class="step-hp step-2-hp">2
+                                                    <br><span>生年月日</span>
+                                                </div>
+                                                <div class="step-hp step-3-hp">3
+                                                    <br><span>希望勤務地</span>
+                                                </div>
+                                                <div class="step-hp step-4-hp">4
+                                                    <br><span>お名前</span>
+                                                </div>
+                                                <div class="step-hp step-5-hp">5
+                                                    <br><span>連絡先</span>
+                                                </div>
+
+                                            </div>
+                                            <?php } ?>
+                                            <div class="form-boxes-hp">
+                                                <?php if(!$success_mail) {?>
+                                                <div class="form-boxes-in-hp form-boxes-1-hp">
+                                                    <div class="form-number-hp">
+                                                        <span>Q1</span>
+                                                    </div>
+                                                    <div class="form-title-hp">
+                                                        <h2>経験のある仕事を<br>教えてください<span>（複数選択可）</span>
+                                                        </h2>
+                                                    </div>
+                                                    <div class="form-option-hp">
+                                                        <div class="form-hp">
+                                                            <input type="checkbox" name="shugyo[]" id="girls" class="q1"
+                                                                value="ガールズバー">
+                                                            <label for="girls" class="">ガールズバー</label>
+                                                        </div>
+                                                        <div class="form-hp">
+                                                            <input type="checkbox" name="shugyo[]" id="caba" class="q1"
+                                                                value="キャバクラ">
+                                                            <label for="caba" class="">キャバクラ</label>
+                                                        </div>
+                                                        <div class="form-hp">
+                                                            <input type="checkbox" name="shugyo[]" id="rounge"
+                                                                class="q1" value="ラウンジ">
+                                                            <label for="rounge" class="">ラウンジ</label>
+                                                        </div>
+                                                        <div class="form-hp">
+                                                            <input type="checkbox" name="shugyo[]" id="snack" class="q1"
+                                                                value="スナック">
+                                                            <label for="snack" class="">スナック</label>
+                                                        </div>
+                                                        <div class="form-hp">
+                                                            <input type="checkbox" name="shugyo[]" id="mens" class="q1"
+                                                                value="メンズエステ">
+                                                            <label for="mens" class="">メンズエステ</label>
+                                                        </div>
+                                                        <div class="form-hp">
+                                                            <input type="checkbox" name="shugyo[]" id="fuzoku"
+                                                                class="q1" value="風俗">
+                                                            <label for="fuzoku" class="">風俗</label>
+                                                        </div>
+                                                        <div class="form-hp">
+                                                            <input type="checkbox" name="shugyo[]" id="other" class="q1"
+                                                                value="その他">
+                                                            <label for="other" class="">その他</label>
+                                                        </div>
+                                                    </div>
+                                                    <div class="form-btn-main-hp">
+                                                        <button type="button"
+                                                            class="common-btn-hp form-btn-hp submit_btn_1"
+                                                            disabled>次のステップへ</button>
+                                                    </div>
+                                                    <div class="guidance-hp">
+                                                        <p class="comment">
+                                                            <span>まずは<br>最初のステップ！</span>
+                                                        </p>
+                                                        <div class="staff"><img
+                                                                src="<?php echo get_stylesheet_directory_uri(); ?>/images/staff.png"
+                                                                alt="">
+                                                        </div>
+                                                    </div>
+                                                </div>
+                                                <div class="form-boxes-in-hp form-boxes-2-hp" style="display:none;">
+                                                    <div class="form-number-hp">
+                                                        <span>Q2</span>
+                                                    </div>
+                                                    <div class="form-title-hp">
+                                                        <h2>生まれた年を入力してください</h2>
+                                                    </div>
+                                                    <div class="form-option-hp form-option-2-hp ">
+                                                        <div class="form-hp form-2-hp">
+                                                            <p class="year">西暦</p>
+                                                            <div class="detail">
+                                                                <input required="" type="text" name="seinen" id="seinen"
+                                                                    placeholder="生まれた年" value="">
+                                                            </div>
+                                                            <p class="year">年</p>
+                                                        </div>
+                                                    </div>
+                                                    <div class="form-btn-main-hp">
+                                                        <button type="button"
+                                                            class="common-btn-hp form-btn-hp submit_btn_2"
+                                                            disabled>次のステップへ</button>
+                                                    </div>
+                                                    <div class="back-hp">
+                                                        <input type="button" class="back_btn back_btn_2"
+                                                            value="戻って修正する">
+                                                    </div>
+                                                    <div class="guidance-hp">
+                                                        <p class="comment">
+                                                            <span>生まれた年を<br>ご記入ください</span>
+                                                        </p>
+                                                        <div class="staff"><img
+                                                                src="<?php echo get_stylesheet_directory_uri(); ?>/images/staff.png"
+                                                                alt="">
+                                                        </div>
+                                                    </div>
+                                                </div>
+                                                <div class="form-boxes-in-hp form-boxes-3-hp" style="display:none;">
+                                                    <div class="form-number-hp">
+                                                        <span>Q3</span>
+                                                    </div>
+                                                    <div class="form-title-hp">
+                                                        <h2>希望勤務地はどこですか？</h2>
+                                                    </div>
+                                                    <div class="form-option-hp form-option-3-hp">
+                                                        <div class="form-hp">
+                                                            <input type="checkbox" name="kinmuchi[]" class="q3"
+                                                                id="tokyo" value="東京">
+                                                            <label for="tokyo">東京</label>
+                                                        </div>
+                                                        <!--form-->
+
+                                                        <div class="form-hp">
+                                                            <input type="checkbox" name="kinmuchi[]" class="q3"
+                                                                id="kanagawa" value="神奈川">
+                                                            <label for="kanagawa">神奈川</label>
+                                                        </div>
+                                                        <!--form-->
+
+                                                        <div class="form-hp">
+                                                            <input type="checkbox" name="kinmuchi[]" class="q3"
+                                                                id="chiba" value="千葉">
+                                                            <label for="chiba">千葉</label>
+                                                        </div>
+                                                        <!--form-->
+
+                                                        <div class="form-hp">
+                                                            <input type="checkbox" name="kinmuchi[]" class="q3"
+                                                                id="saitama" value="埼玉">
+                                                            <label for="saitama">埼玉</label>
+                                                        </div>
+                                                        <!--form-->
+
+                                                        <div class="form-hp">
+                                                            <input type="checkbox" name="kinmuchi[]" class="q3"
+                                                                id="osaka" value="大阪">
+                                                            <label for="osaka">大阪</label>
+                                                        </div>
+                                                        <!--form-->
+
+                                                        <div class="form-hp">
+                                                            <input type="checkbox" name="kinmuchi[]" class="q3"
+                                                                id="kyoto" value="京都">
+                                                            <label for="kyoto">京都</label>
+                                                        </div>
+                                                        <!--form-->
+
+                                                        <div class="form-hp">
+                                                            <input type="checkbox" name="kinmuchi[]" class="q3"
+                                                                id="hyogo" value="兵庫">
+                                                            <label for="hyogo">兵庫</label>
+                                                        </div>
+                                                        <!--form-->
+
+                                                        <div class="form-hp">
+                                                            <input type="checkbox" name="kinmuchi[]" class="q3"
+                                                                id="nara" value="奈良">
+                                                            <label for="nara">奈良</label>
+                                                        </div>
+                                                        <!--form-->
+
+                                                        <div class="form-hp">
+                                                            <input type="checkbox" name="kinmuchi[]" class="q3"
+                                                                id="fukuoka" value="福岡">
+                                                            <label for="fukuoka">福岡</label>
+                                                        </div>
+                                                        <!--form-->
+
+                                                        <div class="form-hp">
+                                                            <input type="checkbox" name="kinmuchi[]" class="q3"
+                                                                id="aichi" value="愛知">
+                                                            <label for="aichi">愛知</label>
+                                                        </div>
+                                                        <!--form-->
+
+                                                        <div class="form-hp">
+                                                            <input type="checkbox" name="kinmuchi[]" class="q3"
+                                                                id="sapporo" value="札幌">
+                                                            <label for="sapporo">札幌</label>
+                                                        </div>
+                                                        <!--form-->
+
+                                                        <div class="form-hp">
+                                                            <input type="checkbox" name="kinmuchi[]" class="q3"
+                                                                id="miyagi" value="宮城">
+                                                            <label for="miyagi">宮城</label>
+                                                        </div>
+                                                        <!--form-->
+
+                                                        <div class="form-hp">
+                                                            <input type="checkbox" name="kinmuchi[]" class="q3" id="all"
+                                                                value="全国">
+                                                            <label for="all">全国</label>
+                                                        </div>
+                                                        <!--form-->
+                                                    </div>
+                                                    <div class="form-btn-main-hp">
+                                                        <button type="button"
+                                                            class="common-btn-hp form-btn-hp submit_btn_3"
+                                                            disabled>次のステップへ</button>
+                                                    </div>
+                                                    <div class="back-hp">
+                                                        <input type="button" class="back_btn back_btn_3"
+                                                            value="戻って修正する">
+                                                    </div>
+                                                    <div class="guidance-hp">
+                                                        <p class="comment">
+                                                            <span>ご希望の勤務地を<br>教えてください</span>
+                                                        </p>
+                                                        <div class="staff"><img
+                                                                src="<?php echo get_stylesheet_directory_uri(); ?>/images/staff.png" />
+                                                        </div>
+                                                    </div>
+                                                </div>
+                                                <div class="form-boxes-in-hp form-boxes-4-hp" style="display:none;">
+                                                    <div class="form-number-hp">
+                                                        <span>Q4</span>
+                                                    </div>
+                                                    <div class="form-title-hp">
+                                                        <h2>お名前とフリガナを教えてください</h2>
+                                                    </div>
+                                                    <div class="form-option-hp form-option-4-hp">
+                                                        <div class="form-hp">
+                                                            <p class="item">お名前</p>
+                                                            <div class="detail">
+                                                                <input required type="text" class="name1"
+                                                                    name="name_sei" placeholder="姓" id="name_sei"
+                                                                    value="">
+                                                                <input type="text" class="name1" name="name_mei"
+                                                                    placeholder="名" id="name_mei" value="">
+                                                            </div>
+                                                        </div>
+                                                        <div class="form-hp">
+                                                            <p class="item">フリガナ</p>
+                                                            <div class="detail">
+                                                                <input required type="text" class="name2"
+                                                                    name="furigana_sei" placeholder="セイ" value=""
+                                                                    id="furigana_sei">
+                                                                <input type="text" class="name2" name="furigana_mei"
+                                                                    placeholder="メイ" value="" id="furigana_mei">
+                                                            </div>
+                                                        </div>
+                                                    </div>
+                                                    <div class="form-btn-main-hp">
+                                                        <button type="button"
+                                                            class="common-btn-hp form-btn-hp submit_btn_4"
+                                                            disabled>次のステップへ</button>
+                                                    </div>
+                                                    <div class="back-hp">
+                                                        <input type="button" class="back_btn back_btn_4"
+                                                            value="次のステップへ">
+                                                    </div>
+                                                    <div class="guidance-hp">
+                                                        <p class="comment"><span>あと一息です！</span>
+                                                        </p>
+                                                        <div class="staff"><img
+                                                                src="<?php echo get_stylesheet_directory_uri(); ?>/images/staff.png"
+                                                                alt="">
+                                                        </div>
+                                                    </div>
+                                                </div>
+                                                <div class="form-boxes-in-hp form-boxes-5-hp" style="display:none;">
+                                                    <div class="form-number-hp">
+                                                        <span>Q5</span>
+                                                    </div>
+                                                    <div class="form-title-hp">
+                                                        <h2>優良企業を紹介するための<br>連絡先を教えてください</h2>
+                                                    </div>
+                                                    <div class="form-option-hp form-option-4-hp form-option-5-hp">
+                                                        <div class="form-hp">
+                                                            <p class="item">携帯番号</p>
+                                                            <div class="detail"><input required="" type="tel"
+                                                                    class="tel" name="tel" id="tel"
+                                                                    placeholder="000-0000-0000" value="">
+                                                            </div>
+                                                        </div>
+                                                        <div class="form-hp form-email-hp">
+                                                            <p class="item">メールアドレス</p>
+                                                            <div class="detail">
+                                                                <input required="" type="email" class="email"
+                                                                    name="email" id="email" placeholder="xxx@xxx.xxx"
+                                                                    value="">
+                                                            </div>
+                                                        </div>
+                                                    </div>
+                                                    <div class="form-btn-main-hp">
+                                                        <button type="button"
+                                                            class="common-btn-hp form-btn-hp submit_btn_5"
+                                                            disabled>確認する</button>
+                                                    </div>
+                                                    <div class="back-hp">
+                                                        <input type="button" class="back_btn back_btn_5"
+                                                            value="戻って修正する">
+                                                    </div>
+                                                    <div class="guidance-hp">
+                                                        <p class="comment">
+                                                            <span>これが<br>最後の質問です！</span>
+                                                        </p>
+                                                        <div class="staff">
+                                                            <img src="<?php echo get_stylesheet_directory_uri(); ?>/images/staff.png"
+                                                                alt="">
+                                                        </div>
+                                                    </div>
+                                                </div>
+                                                <div class="form-boxes-in-hp form-boxes-6-hp" style="display: none">
+                                                    <p class="check_p4 text-center h1">CHECK</p>
+                                                    <h2 class="text-center">入力に間違いはありませんか？</h2>
+                                                    <div class="forms container mt-2">
+                                                        <div class="form-item top_border">
+                                                            <p class="form_query font-weight-bold">
+                                                                現在就業していますか？</p>
+                                                            <p id="answer_1" class="mt-1">
+                                                            </p>
+                                                        </div>
+
+                                                        <div class="form-item">
+                                                            <p class="form_query font-weight-bold">
+                                                                生年月日を入力して下さい</p>
+                                                            <p id="answer_2" class="mt-1">
+                                                            </p>
+                                                        </div>
+
+                                                        <div class="form-item">
+                                                            <p class="form_query font-weight-bold">
+                                                                希望勤務地はどこですか？</p>
+                                                            <p id="answer_3" class="mt-1">
+                                                            </p>
+                                                        </div>
+
+                                                        <div class="form-item">
+                                                            <p class="form_query font-weight-bold">
+                                                                お名前とフリガナを教えてください</p>
+                                                            <p class="mt-1">
+                                                                <span class="text-muted">お名前：</span>
+                                                                <span id="name_i"></span>
+                                                            </p>
+                                                            <p>
+                                                                <span class="text-muted">フリガナ：</span>
+                                                                <span id="furigana"></span>
+                                                            </p>
+                                                        </div>
+
+                                                        <div class="form-item">
+                                                            <p class="form_query font-weight-bold">
+                                                                優良企業を紹介するための連絡先を教えてください</p>
+                                                            <p class="mt-1">
+                                                                <span class="text-muted">携帯：</span>
+                                                                <span id="tel_txt"></span>
+                                                            </p>
+                                                            <p>
+                                                                <span class="text-muted">メールアドレス：</span>
+                                                                <span id="email_txt"></span>
+                                                            </p>
+                                                        </div>
+                                                    </div>
+                                                    <div class="form-btn-main-hp">
+                                                        <button type="button"
+                                                            class="common-btn-hp form-btn-hp submit_btn_6">送信する</button>
+                                                    </div>
+                                                    <div class="back-hp">
+                                                        <input type="button" class="back_btn back_btn_6"
+                                                            value="戻って修正する">
+                                                    </div>
+                                                    <div class="guidance-hp">
+                                                        <p class="comment">
+                                                            <span>最終確認を<br />お願いいたします！</span>
+                                                        </p>
+                                                        <div class="staff">
+                                                            <img src="<?php echo get_stylesheet_directory_uri(); ?>/images/staff.png"
+                                                                alt="">
+                                                        </div>
+                                                    </div>
+                                                </div>
+                                                <?php } else {?>
+                                                <div class="form-boxes-in-hp form-boxes-7-hp text-center">
+                                                    <h2 class="text-center">送信完了</h2>
+                                                    <div class="forms container mt-2">
+                                                        <p class="py-4 h5">
+                                                            昼ナビへのエントリーを受け付けました。<br />
+                                                            確認メールをお送りさせていただいております。<br />
+                                                            内容確認後、担当者よりご連絡させていただきます。<br />
+                                                        </p>
+                                                        <p class="text-danger py-4">
+                                                            自動返信メールが届かない場合は、<br />
+                                                            フォーム内容が送信出来ていない可能性がございます。<br />
+                                                            お手数をおかけいたしますが、再度ご入力いただくか、<br />
+                                                            直接お電話にてお問い合わせください。<br />
+                                                        </p>
+                                                    </div>
+                                                    <div class="form-btn-main-hp">
+                                                        <button type="button"
+                                                            class="common-btn-hp form-btn-hp submit_btn_7">ホームへ戻る</button>
+                                                    </div>
+                                                    <div class="guidance-hp">
+                                                        <p class="comment">
+                                                            <span>送信が<br />完了しました！</span>
+                                                        </p>
+                                                        <div class="staff">
+                                                            <img src="<?php echo get_stylesheet_directory_uri(); ?>/images/staff.png"
+                                                                alt="">
+                                                        </div>
+                                                    </div>
+                                                </div>
+                                                <?php } ?>
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <div class="clearfix"></div>
+                                </div>
+                                <div class="clearfix"></div>
                             </div>
-                            <div class="clearfix"></div>
                         </div>
-                        <div class="clearfix"></div>
-                    </div>
-                </form>
+
+                    </form>
+                </div>
             </div>
         </div>
         <div class="clearfix"></div>
@@ -602,12 +624,11 @@ if(isset($_POST['contact_kind'])) {
                             <div class="daytime-top-in-hp"
                                 style="background:url(<?php echo get_stylesheet_directory_uri() ?>/images/daytime_banner.png) no-repeat center center; background-size:cover;">
                                 <div class="daytime-right-hp">
-                                    <h2>Hiru Navi</h2>
+                                    <h2 id="about_hiru">Hiru Navi</h2>
                                     <p>昼ナビは、キャバクラ・クラブ・ボーイ・黒服などのナイトワークの方々が昼職に転職に転職したいと考えた時に感じる「履歴書の書き方が分からない」・「自分にあった仕事が分からない」・「昼職の実情が分からない」といったお悩みをアドバイザーが一人ひとりに真剣に向き合い、お話しした上で全て解消し、希望や適正に応じたお仕事をご紹介します。
                                     </p>
                                     <div class="daytime-btn-hp">
-                                        <a href="<?php echo get_site_url() ?>/consultation_form"
-                                            class="common-btn-hp">お問い合わせはこちら</a>
+                                        <a href="#form_consult" class="common-btn-hp">お問い合わせはこちら</a>
                                     </div>
                                 </div>
                                 <div class="clearfix"></div>
@@ -638,22 +659,25 @@ if(isset($_POST['contact_kind'])) {
                             </div>
                         </div>
                         <div class="trouble-bottom-hp">
-                            <div class="trouble-box-hp">
-                                <div class="trouble-box-in-hp">
+                            <div class="trouble-box-hp hp_left">
+                                <div class="trouble-box-in-hp ">
                                     履歴書の書き方が<br>
                                     わからない
                                 </div>
                             </div>
-                            <div class="trouble-img-hp">
+                            <div class="trouble-img-hp hp_right">
                                 <img src="<?php echo get_stylesheet_directory_uri() ?>/images/trouble_img.png" alt="" />
                             </div>
-                            <div class="trouble-box-hp">
-                                <div class="trouble-box-in-hp">
+                            <div class="trouble-box-hp hp_left">
+                                <div class="trouble-box-in-hp ">
                                     向いている昼職が<br>
                                     わからない、<br>
                                     イメージがつかない
                                 </div>
                             </div>
+                        </div>
+                        <div class="trouble-img-hp_android">
+                            <img src="<?php echo get_stylesheet_directory_uri() ?>/images/trouble_img.png" alt="" />
                         </div>
                     </div>
                     <div class="clearfix"></div>
@@ -674,7 +698,7 @@ if(isset($_POST['contact_kind'])) {
                             </div>
                         </div>
                         <div class="solution-desc-hp">
-                            <p>
+                            <p class="text-center">
                                 実績豊富な夜職出身のアドバイザーがあなたを全力でサポートし、不安や心配事を全て解消します。<br>
                                 例えば、適職が分からない方には、『面談を通して、1万7千以上ある職種の中からあなたに最適なお仕事をご紹介』。<br>
                                 昼職のイメージができていない方には、『仕事内容の詳細や、その仕事を通して感じることができるやりがい、大変なポイントを丁寧にお伝え』。<br>
@@ -682,7 +706,7 @@ if(isset($_POST['contact_kind'])) {
                                 さらに、面談から履歴書作成、面接対策なども手厚く、アドバイザー自身の昼職での実体験や、転職に成功した求職者様の体験談などもお話します。
                             </p>
                             <div class="solution-btn-hp">
-                                <a href="#" class="common-btn-hp">不安が期待に変わる。そんな一人ひとりに寄り添った転職支援サービスが昼ナビです。</a>
+                                <a  class="common-btn-hp no-cursor">不安が期待に変わる。そんな一人ひとりに寄り添った転職支援サービスが昼ナビです。</a>
                             </div>
                         </div>
 
@@ -706,7 +730,7 @@ if(isset($_POST['contact_kind'])) {
                         </div>
                         <div class="merit-precess-main-mp">
                             <div class="merit-box-mp">
-                                <a href="#">
+                                <a href="#merit_1">
                                     <div class="merit-number-mp">Merit <span>1</span></div>
                                     <div class="merit-name-mp">
                                         <span>
@@ -720,7 +744,7 @@ if(isset($_POST['contact_kind'])) {
                                 </a>
                             </div>
                             <div class="merit-box-mp">
-                                <a href="#">
+                                <a href="#merit_2">
                                     <div class="merit-number-mp">Merit <span>2</span></div>
                                     <div class="merit-name-mp">
                                         <span>
@@ -733,7 +757,7 @@ if(isset($_POST['contact_kind'])) {
                                 </a>
                             </div>
                             <div class="merit-box-mp">
-                                <a href="#">
+                                <a href="#merit_3">
                                     <div class="merit-number-mp">Merit <span>3</span></div>
                                     <div class="merit-name-mp">
                                         <span>
@@ -754,7 +778,7 @@ if(isset($_POST['contact_kind'])) {
                                         alt="" />
                                 </div>
                                 <div class="merit-box-right-hp">
-                                    <div class="merit-box-title-hp">
+                                    <div class="merit-box-title-hp" id="merit_1">
                                         <div class="merit-number-mp">Merit <span>1</span></div>
                                         <div class="merit-box-name-hp">アドバイザーが夜職出身者</div>
                                     </div>
@@ -768,7 +792,7 @@ if(isset($_POST['contact_kind'])) {
                                         alt="" />
                                 </div>
                                 <div class="merit-box-right-hp">
-                                    <div class="merit-box-title-hp">
+                                    <div class="merit-box-title-hp" id="merit_2">
                                         <div class="merit-number-mp">Merit <span>2</span></div>
                                         <div class="merit-box-name-hp">履歴書不要</div>
                                     </div>
@@ -782,7 +806,7 @@ if(isset($_POST['contact_kind'])) {
                                         alt="" />
                                 </div>
                                 <div class="merit-box-right-hp">
-                                    <div class="merit-box-title-hp">
+                                    <div class="merit-box-title-hp" id="merit_3">
                                         <div class="merit-number-mp">Merit <span>3</span></div>
                                         <div class="merit-box-name-hp">夜職が職歴になる</div>
                                     </div>
@@ -811,8 +835,7 @@ if(isset($_POST['contact_kind'])) {
                                     <p>昼ナビは、キャバクラ・クラブ・ボーイ・黒服などのナイトワークの方々が昼職に転職に転職したいと考えた時に感じる「履歴書の書き方が分からない」・「自分にあった仕事が分からない」・「昼職の実情が分からない」といったお悩みをアドバイザーが一人ひとりに真剣に向き合い、お話しした上で全て解消し、希望や適正に応じたお仕事をご紹介します。
                                     </p>
                                     <div class="daytime-btn-hp">
-                                        <a href="<?php echo get_site_url() ?>/consultation_form"
-                                            class="common-btn-hp">お問い合わせはこちら</a>
+                                        <a href="#form_consult" class="common-btn-hp">お問い合わせはこちら</a>
                                     </div>
                                 </div>
                                 <div class="clearfix"></div>
@@ -1102,6 +1125,7 @@ if(isset($_POST['contact_kind'])) {
                             </div>
                         </div>
                     </div>
+
                     <div class="clearfix"></div>
                 </div>
             </div>
@@ -1122,8 +1146,7 @@ if(isset($_POST['contact_kind'])) {
                                     <p>昼ナビは、キャバクラ・クラブ・ボーイ・黒服などのナイトワークの方々が昼職に転職に転職したいと考えた時に感じる「履歴書の書き方が分からない」・「自分にあった仕事が分からない」・「昼職の実情が分からない」といったお悩みをアドバイザーが一人ひとりに真剣に向き合い、お話しした上で全て解消し、希望や適正に応じたお仕事をご紹介します。
                                     </p>
                                     <div class="daytime-btn-hp">
-                                        <a href="<?php echo get_site_url() ?>/consultation_form"
-                                            class="common-btn-hp">お問い合わせはこちら</a>
+                                        <a href="#form_consult" class="common-btn-hp">お問い合わせはこちら</a>
                                     </div>
                                 </div>
                                 <div class="clearfix"></div>
@@ -1250,6 +1273,9 @@ if(isset($_POST['contact_kind'])) {
                                 </div>
                             </div>
                         </div>
+                        <div class="daytime-btn-hp text-center mt-5">
+                            <a href="#form_consult" class="common-btn-hp">お問い合わせはこちら</a>
+                        </div>
                     </div>
                     <div class="clearfix"></div>
                 </div>
@@ -1280,7 +1306,5 @@ if(isset($_POST['contact_kind'])) {
     <div class="clearfix"></div>
 </section>
 <!-- CONTAIN_END -->
-
-
 <?php
 get_footer();
