@@ -25,31 +25,31 @@
                 </div>
             </div>
         </div>
-        <div class="android_folding">
-            <div class="d-flex w-100">
-                <div class="flex-fill text-center py-2">
-                    <a href="#form_consult" class="text-white" >
-                        <img src="<?php echo get_stylesheet_directory_uri() ?>/images/line_icon.svg" /> <br/>
-                        LINE
-                    </a>
-                </div>
-                <div class="flex-fill text-center border border-top-0 border-bottom-0 border-white py-2">
-                    <a href="#form_consult" class="text-white" >
-                        <img src="<?php echo get_stylesheet_directory_uri() ?>/images/pc_icon.svg" /> <br/>
-                        登録
-                    </a>
-                </div>
-                <div class="flex-fill text-center py-2">
-                    <a href="#form_consult" class="text-white" >
-                        <i class="fas fa-phone text-white"></i> <br/>
-                        電話
-                    </a>
-                </div>
-            </div>
-        </div>
     </div>
     <div class="clearfix"></div>
 </footer>
+<div class="android_folding">
+    <div class="d-flex w-100">
+        <div class="flex-fill text-center py-3">
+            <a href="#form_consult" class="text-white">
+                <img src="<?php echo get_stylesheet_directory_uri() ?>/images/line_icon.svg" /> <br />
+                LINE
+            </a>
+        </div>
+        <div class="flex-fill text-center border border-top-0 border-bottom-0 border-white py-3">
+            <a href="#form_consult" class="text-white">
+                <img src="<?php echo get_stylesheet_directory_uri() ?>/images/pc_icon.svg" /> <br />
+                登録
+            </a>
+        </div>
+        <div class="flex-fill text-center py-3">
+            <a href="#form_consult" class="text-white">
+                <i class="fas fa-phone text-white"></i> <br />
+                電話
+            </a>
+        </div>
+    </div>
+</div>
 <!-- FOOTER_END -->
 </div>
 <!-- jQuery (necessary for Bootstrap's JavaScript plugins) -->
@@ -88,7 +88,7 @@ $('#work_slider').owlCarousel({
     }
 })
 $(document).on('click', 'a[href^="#"]', function(event) {
-    if($(this).attr('data-toggle') == 'pill') return ;
+    if ($(this).attr('data-toggle') == 'pill') return;
     event.preventDefault();
 
     $('html, body').animate({
