@@ -114,7 +114,12 @@ filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#2c2c2c', end
 
 /*--------------- CONTAIN_START --------------*/
 #contain{ margin:0px; padding:0px 0 0 0; overflow:hidden; }
-.banner-block-hp{ border:30px solid #FBFFD6; background:#775F48; position:relative; }
+.banner-block-hp{ border:30px solid #FBFFD6; background:#775F48; position:relative;
+     background-image: url(../images/banner.png); 
+     background-repeat: no-repeat;
+     background-size: cover;
+     background-position: top left;
+}
 .banner-block-hp:before{ content:''; background:#FBFFD6; width:30px; height:100%; right:-30px; top:0; position:absolute; z-index:1; }
 .banner-overlay-block-hp{  }
 .banner-block-in-hp{}

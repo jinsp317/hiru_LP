@@ -121,8 +121,7 @@ if(isset($_POST['contact_kind'])) {
 ?>
 <!-- CONTAIN_START -->
 <section id="contain">
-    <div class="banner-block-hp"
-        style="background:url(<?php echo get_stylesheet_directory_uri() ?>/images/banner.png) no-repeat top left; background-size:cover;">
+    <div class="banner-block-hp">
         <div class="banner-overlay-block-hp">
             <div class="container">
                 <div class="row">
@@ -132,7 +131,12 @@ if(isset($_POST['contact_kind'])) {
                             <div class="banner-right-hp">
                                 <div class="banner-right-in-hp">
                                     <div class="banner-right-details-hp">
-                                        <h1><span>Hiru</span> Navi</h1>
+                                        <?php if(wp_is_mobile()) { ?>
+                                            <h1 class="text-left mb-1"><span>Hiru</span> <br/> &nbsp;&nbsp;&nbsp;Navi</h1>
+                                        <?php } else { ?>
+                                            <h1><span>Hiru</span> Navi</h1>
+                                        <?php } ?>
+                                        
                                         <p>〜最短<span>2週間</span>で昼職へ〜</p>
                                         <div class="banner-info-hp">
                                             <p>

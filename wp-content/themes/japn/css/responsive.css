@@ -793,6 +793,9 @@
 
     .banner-block-hp {
         border-width: 10px;
+        background-image: url(../images/lp_xs_log.png); 
+        background-position: center center !important;
+        background-size:cover;
     }
 
     .banner-middle-hp {
@@ -843,9 +846,8 @@
 
     .banner-right-details-hp h1 {
         font-size: 100px;
-        line-height: 100px;
+        line-height: 70px;
     }
-
     .banner-right-details-hp p {
         font-size: 18px;
         line-height: 30px;
@@ -857,11 +859,12 @@
 
     .banner-overlay-block-hp {
         background: rgba(88, 64, 33, 0.4);
-        padding-top: 100px;
-        padding-bottom: 40px;
+        padding-top: 35px;
+        padding-bottom: 35px;
     }
 
     .banner-right-in-hp {
+        background-image: none;
         background-size: cover;
         justify-content: center;
     }
@@ -1560,7 +1563,7 @@
 
     .banner-block-hp {
         border-width: 10px;
-        background-position: left center !important;
+        background-position: center center !important;
     }
 
     .banner-middle-hp {
@@ -1593,6 +1596,7 @@
 
     .banner-right-details-hp h1 {
         font-size: 100px;
+        
         line-height: 100px;
     }
 
