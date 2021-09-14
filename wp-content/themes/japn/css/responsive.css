@@ -794,7 +794,7 @@
     .banner-block-hp {
         border-width: 10px;
         background-image: url(../images/lp_xs_log.png); 
-        background-position: center center !important;
+        background-position: center top !important;
         background-size:cover;
     }
 
